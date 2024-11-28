@@ -1,0 +1,24 @@
+{
+    "noliktava": [
+        {
+            "produkts": "zemenes",
+            "cena": 8.95,
+            "daudzums": 20
+        },
+        {
+            "produkts": "aboli",
+            "cena": 3.5,
+            "daudzums": 62
+        },
+        {
+            "produkts": "mellenes",
+            "cena": 8,
+            "daudzums": 88
+        },
+        {
+            "produkts": "kaza",
+            "cena": "200",
+            "daudzums": "3"
+        }
+    ]
+}
