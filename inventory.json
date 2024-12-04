@@ -1,24 +1,17 @@
 {
-    "noliktava": [
-        {
-            "produkts": "zemenes",
-            "cena": 8.95,
-            "daudzums": 20
-        },
-        {
-            "produkts": "aboli",
-            "cena": 3.5,
-            "daudzums": 62
-        },
-        {
-            "produkts": "mellenes",
-            "cena": 8,
-            "daudzums": 88
-        },
-        {
-            "produkts": "kaza",
-            "cena": "200",
-            "daudzums": "3"
-        }
-    ]
+    "6": {
+        "product": "govs",
+        "price": "1850",
+        "unit": "3"
+    },
+    "7": {
+        "product": "kakis",
+        "price": "35",
+        "unit": "22"
+    },
+    "8": {
+        "product": "suns",
+        "price": "850",
+        "unit": "45"
+    }
 }
