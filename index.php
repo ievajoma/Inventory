@@ -1,5 +1,6 @@
 <?php
 require("motors.php");
+$product = getInventory();
 $atbilde = null;
 if (isset($_POST['submit'])) {
     $atbilde = storeInventory($_POST['product'], $_POST['price'], $_POST['unit']);
@@ -43,6 +44,26 @@ if (isset($_POST['submit'])) {
     <h3>Pārskatīt un rediģēt noliktavu:</h3>
 
     <button><a href="http://localhost/inventory/inventory.php">Rediģēt</a></button>
+
+    <h3>Meklēt produktu:</h3>
+
+    <form action="index.php" method="get">
+        <input type="text" name="search" value="<?php echo @$_GET['search'] ?>">
+        <input type="submit" name="mekleet" value="Meklēt"><br>
+    </form>
+
+    <?php
+    if (isset($_GET['mekleet'])) {
+        $search = $_GET['search'];
+        foreach ($product as $key => $value) {
+            if ($value["product"] == $search) {
+                echo "Produkts: " . $value["product"] . "<br>
+                Cena: " . $value["price"] . "<br>
+                Daudzums: " . $value["unit"] . "<br>";
+            }
+        }
+    }
+    ?>
 
 </body>
 
