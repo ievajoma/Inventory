@@ -58,7 +58,8 @@ if (isset($_POST['submit'])) {
     if (isset($_GET['mekleet'])) {
         $search = $_GET['search'];
         foreach ($product as $key => $value) {
-            if ($value["product"] == $search) {
+            $possible_product = mb_stripos($value["product"], $search);
+            if ( $possible_product !== false ) {
                 echo "Produkts: " . $value["product"] . "<br>
                 Cena: " . $value["price"] . "<br>
                 Daudzums: " . $value["unit"] . "<br>";
