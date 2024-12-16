@@ -37,6 +37,8 @@ if (isset($_POST['submit'])) {
             echo "Saglabāt neizdevās!";
         } elseif ($atbilde == "tuksh") {
             echo "Nav saglabāts! Jāaizpilda visi logi.";
+        } elseif ($atbilde == "int_not_valid") {
+            echo "Cena un daudzums jānorāda skaitļos.<br>Daudzums tikai veselās vienībās.";
         }
         ?>
     </form>

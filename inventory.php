@@ -28,12 +28,11 @@ if (isset($_GET['change_unit'])) {
 
     <p>
         <?php
-        $prices = array_column($product, 'price');
         $total = null;
-        foreach ($prices as $price) {
-            $total += $price;
+        foreach ($product as $key => $value) {
+            $total += $value["price"] * $value["unit"];
         }
-        echo "Kopējā krājumu vērtība ir:  " . $total . "<br>";
+        echo "<br>KOPĒJĀ krājumu vērtība = " . $total . " naudas vienības.<br><br>";
         ?>
     </p>
 
@@ -61,6 +60,12 @@ if (isset($_GET['change_unit'])) {
             <input type="text" name="new_unit" value="<?php echo @$_GET['new_unit'] ?>">
             <input type="hidden" name="key" value="<?php echo $key ?>">
             <input type="submit" name="change_unit" value="Mainīt">
+
+            <?php
+                if ($atbilde == "new_unit_not_valid") {
+                    echo "Nav mainīts!";
+                } 
+            ?>
         </form>
 
         <form action="inventory.php" method="get">

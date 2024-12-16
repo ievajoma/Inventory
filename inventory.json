@@ -4,14 +4,24 @@
         "price": "1850",
         "unit": "3"
     },
-    "7": {
-        "product": "kakis",
-        "price": "35",
-        "unit": "22"
-    },
     "8": {
         "product": "suns",
         "price": "850",
-        "unit": "45"
+        "unit": 23
+    },
+    "9": {
+        "product": "kaza",
+        "price": "632",
+        "unit": 1
+    },
+    "10": {
+        "product": "zirgs",
+        "price": "12000",
+        "unit": "18"
+    },
+    "13": {
+        "product": "GFFD",
+        "price": "21.2",
+        "unit": "654"
     }
 }
